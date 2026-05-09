@@ -216,3 +216,27 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================================
+# Adiciones específicas del proyecto NYC Taxi Medallion
+# ============================================================
+
+# Datos crudos descargados de NYC TLC (no subir, son grandes)
+data/*.parquet
+data/*.csv
+
+# Reportes JSON generados por las ejecuciones
+reports/*.json
+
+# Notebooks exportados como .ipynb (preferimos .py por legibilidad en Git)
+*.ipynb
+.ipynb_checkpoints/
+
+# Archivos de IDE
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
