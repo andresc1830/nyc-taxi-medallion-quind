@@ -136,6 +136,7 @@ Repositorio público y notebooks ejecutables disponibles para revisión en vivo 
 
 ## Contacto
 
-**Andrés Camilo Rojas**  
-Sistemas Engineer | Pricing & Data Specialist  
-andresc.rojasp@gmail.com · (https://www.linkedin.com/in/andr%C3%A9s-rojas-5b9aa894/)
+**Andrés Camilo Rojas Pinto**  
+Data Engineer | Pricing & Data Specialist  
+andresc.rojasp@gmail.com ·
+https://www.linkedin.com/in/andr%C3%A9s-rojas-5b9aa894/
