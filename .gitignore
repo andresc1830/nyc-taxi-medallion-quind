@@ -226,7 +226,7 @@ data/*.parquet
 data/*.csv
 
 # Reportes JSON generados por las ejecuciones
-reports/*.json
+# reports/*.json
 
 # Notebooks exportados como .ipynb (preferimos .py por legibilidad en Git)
 *.ipynb

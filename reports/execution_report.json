@@ -1,0 +1,93 @@
+{
+  "execution_metadata": {
+    "execution_id": "37538f36-50aa-4e56-84cd-b1d4ed7ea635",
+    "execution_timestamp_utc": "2026-05-11T10:54:47.529313+00:00",
+    "total_execution_seconds": 355.74,
+    "notebook": "04_data_quality_report",
+    "catalog": "nyc_taxi_andres_rojas"
+  },
+  "pipeline_summary": {
+    "raw_records": 3066766,
+    "trusted_records": 2987000,
+    "records_discarded": 79766,
+    "discard_rate_pct": 2.601,
+    "raw_gross_income_usd": 56327501.54
+  },
+  "tables_created": {
+    "raw": [
+      "yellow_trips_raw",
+      "taxi_zones_raw"
+    ],
+    "trusted": [
+      "yellow_trips_trusted"
+    ],
+    "refined": [
+      "kpi_demanda_temporal",
+      "kpi_eficiencia_economica",
+      "kpi_impacto_calidad_datos",
+      "data_quality_report"
+    ]
+  },
+  "stage_timings_seconds": {
+    "lectura_tablas": 4.88,
+    "escritura_dq_report": 4.2,
+    "generacion_json": 2.04
+  },
+  "data_quality_rules": [
+    {
+      "regla_id": "R1",
+      "descripcion": "pickup_datetime < dropoff_datetime",
+      "registros_descartados": 1121,
+      "pct_descartados": 0.0366,
+      "ingreso_descartado_usd": 22480.58
+    },
+    {
+      "regla_id": "R2",
+      "descripcion": "trip_distance > 0",
+      "registros_descartados": 45862,
+      "pct_descartados": 1.4955,
+      "ingreso_descartado_usd": 1085033.93
+    },
+    {
+      "regla_id": "R3",
+      "descripcion": "fare_amount > 0",
+      "registros_descartados": 26159,
+      "pct_descartados": 0.853,
+      "ingreso_descartado_usd": -481911.23
+    },
+    {
+      "regla_id": "R4",
+      "descripcion": "trip_duration_minutes <= 360",
+      "registros_descartados": 2837,
+      "pct_descartados": 0.0925,
+      "ingreso_descartado_usd": 66986.28
+    },
+    {
+      "regla_id": "R5",
+      "descripcion": "trip_duration_minutes >= 1",
+      "registros_descartados": 33335,
+      "pct_descartados": 1.087,
+      "ingreso_descartado_usd": 801262.28
+    }
+  ],
+  "kpi_highlights": {
+    "peak_demand": {
+      "franja_horaria": "4_tarde",
+      "dia_semana": "Martes",
+      "num_viajes": 119262,
+      "tarifa_total_usd": 2306534.5
+    },
+    "most_profitable_zone": {
+      "borough": "Queens",
+      "zone": "Jackson Heights",
+      "ingreso_por_milla_usd": 28.11,
+      "num_viajes": 431
+    },
+    "highest_volume_zone": {
+      "borough": "Queens",
+      "zone": "JFK Airport",
+      "ingreso_total_usd": 9310546.11,
+      "num_viajes": 152893
+    }
+  }
+}
